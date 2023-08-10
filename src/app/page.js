@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
 <h1>
-  Bunny Blog Next.js
+  Next JS Blog App
 </h1>
     </main>
   )
