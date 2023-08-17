@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { dbConnect } from "../../../../config/dbConnect";
+dbConnect();
 
 //get one post
 export async function GET(request, { params }) {

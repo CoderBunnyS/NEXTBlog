@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { dbConnect } from "../../../config/dbConnect";
+dbConnect();
 
 export async function GET(request) {
   return NextResponse.json({
