@@ -26,4 +26,6 @@ if(mongoose.models && mongoose.models.blogs) {
     delete mongoose.models.blogs;
 }
 
-const Blog = mongoose.model('blogs', blogSchema)
+const Blog = mongoose.model('blogs', blogSchema);
+
+export default Blog;
