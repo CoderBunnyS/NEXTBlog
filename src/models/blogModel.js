@@ -22,10 +22,11 @@ const blogSchema = new mongoose.Schema(
 );
 
 //check if model exists
-if(mongoose.models && mongoose.models.blogs) {
-    delete mongoose.models.blogs;
+if (mongoose.models && mongoose.models.blogs) {
+  const blogModel = mongoose.models.blog;
+  mongoose.deleteModel(blogModel.modelName);
 }
 
-const Blog = mongoose.model('blogs', blogSchema);
+const Blog = mongoose.model("blogs", blogSchema);
 
 export default Blog;
