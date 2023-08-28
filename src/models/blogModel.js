@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const blogSchema = new mongoose.Schema(
   {
@@ -21,4 +21,9 @@ const blogSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("blogs", blogSchema);
+//check if model exists
+if(mongoose.models && mongoose.models.blogs) {
+    delete mongoose.models.blogs;
+}
+
+const Blog = mongoose.model('blogs', blogSchema)
